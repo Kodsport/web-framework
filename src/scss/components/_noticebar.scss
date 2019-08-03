@@ -1,0 +1,21 @@
+@import '../theme/typography';
+@import '../theme/colors';
+
+.NoticeBar {
+  align-items: center;
+  display: flex;
+}
+
+.NoticeText {
+  text-align: center;
+  width: 100%;
+  margin: 1em auto 1em auto;
+  font-weight: 700;
+  font-size: 1.1em;
+
+  a {
+    &:hover {
+    }
+  }
+}
+

@@ -1,0 +1,14 @@
+@import '../theme/colors';
+@import '../theme/typography';
+
+.article-header {
+  padding-top: 30px;
+  text-align: center;
+
+  h1, h2 {
+    margin: 0;
+  }
+
+  padding-bottom: 30px;
+  border-bottom: 1px solid color('gray-10');
+}

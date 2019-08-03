@@ -1,0 +1,59 @@
+$highlight-color: orange;
+$placeholder-padding: 8px;
+$placeholder-font-size: 16px;
+$placeholder-font-size-small: 14px;
+$placeholder-transition: 200ms ease-in-out;
+$input-font-size: 16px;
+$input-top: 15px;
+$input-height: 30px;
+$input-border-color: grey;
+
+.form-group {
+  width: 200px;
+
+  label {
+    position:relative;
+    display:block;
+    width:100%;
+    min-height:$input-height + $input-top;
+  }
+
+  .placeholder {
+    position:absolute;
+    display:block;
+    top:($input-height / 2) + $placeholder-padding;
+    z-index:2;
+    font-size:$placeholder-font-size;
+    transition:all $placeholder-transition;
+    width:100%;
+    cursor:text;
+  }
+
+  input[type="text"], input[type="password"] {
+    position:absolute;
+    top:$input-top;
+    z-index:1;
+    width:100%;
+    font-size:$input-font-size;
+    border:0;
+    border-bottom:1px solid $input-border-color;
+    transition: border-color $placeholder-transition;
+    outline:none;
+    padding: 0;
+    margin: 0;
+    height:$input-height; 
+  
+    &:focus + .placeholder,
+    &:valid + .placeholder {
+      top:0;
+      cursor:inherit;
+      font-size:$placeholder-font-size-small;
+      color: color('accent');
+    }
+
+    &:focus, &:valid {
+      border-bottom:2px solid color('accent');
+    }
+  }
+}
+

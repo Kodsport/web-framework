@@ -1,0 +1,249 @@
+<!DOCTYPE htdoctypeml>
+<html lang="sv">
+  <head>
+    <title>Kodsport Web Framework</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Kodsport is a Swedish coding association">
+    <meta property="og:site_name" content="Kodsport">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Kodsport">
+    <meta property="og:locale" content="sv_SE">
+    <meta property="og:url" content="https://kodsport.se/">
+    <meta property="og:image" content="https://kodsport.se/img/logo.png">
+    <meta property="og:description" content="Kodsport is a Swedish coding assocation">
+
+    <script type="text/javascript" src="/kodsport.min.js"></script>
+    <link rel="stylesheet" href="/main.css">
+    <link rel="icon" href="/static/kodsport/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+  </head>
+
+  <body>
+    <header class="navbar">
+      <div class="navbar-container">
+        <div class="navbar-top">
+          <img class="navbar-logo" src="/static/kodsport/logo.svg">
+          <button class="navbar-hamburger">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <nav class="navbar-nav closed">
+          <ul>
+            <li class="active"><a href="/">Hem</a></li>
+            <li><a href="">Bli medlem</a></li>
+            <li class="navbar-dropdown closed">
+              <a href="javascript:;">Aktiviteter <span class="navbar-dropdown-caret"></span></a>
+              <ul>
+                <li><a href="https://progolymp.se">Programmeringsolympiaden</a></li>
+                <li><a href="">Swedish Coding Cup</a></li>
+                <li><a href="">Säkerhets-SM</a></li>
+                <li><a href="">Månadens IT-säkerhetsproblem</a></li>
+                <li><a href="">Gymnasieläger</a></li>
+                <li><a href="">Universitetsläger</a></li>
+                <li><a href="">Programmeringsträningar</a></li>
+                <li><a href="">Lär dig koda-helger</a></li>
+              </ul>
+            </li>
+            <li><a href="">Sponsra</a></li>
+            <li class="navbar-dropdown closed">
+              <a href="javascript:;">Community <span class="navbar-dropdown-caret"></span></a>
+              <ul>
+                <li><a href="">Discord&nbsp;(chatserver)</a></li>
+                <li><a href="">Instagram</a></li>
+              </ul>
+            </li>
+            <li class="navbar-dropdown closed">
+              <a href="javascript:;">Om oss <span class="navbar-dropdown-caret"></span></a>
+              <ul>
+                <li><a href="">Föreningen</a></li>
+                <li><a href="">Teamet</a></li>
+                <li><a href="">Kontakt</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section>
+      <article>
+        <header class="article-header">
+          <div class="row">
+            <h1 class="display">Webramverk för Kodsport</h1>
+            <h2 class="display subtext">Dokumentation</h1>
+          </div>
+        </header>
+        <div class="row">
+            <h2>Färger</h2>
+            <p>
+            Det finns fyra olika färger fördefinerade:
+            <ul>
+              <li>Blå (<code>blue</code>)
+                <li>Grön (<code>green</code>)
+                  <li>Gul (<code>yellow</code>)
+                    <li>Röd (<code>red</code>)
+            </ul>
+            <p>
+            Dessa finns i ett antal olika nyanser: 900, 800, 700, 600, 500, 400, 300, 200, 100, 50 beroende på vilken färgintensitet som söks.
+            <table class="color-table">
+              <tr>
+                <td class="bg-blue-900"></td>
+                <td class="bg-blue-800"></td>
+                <td class="bg-blue-700"></td>
+                <td class="bg-blue-600"></td>
+                <td class="bg-blue-500"></td>
+                <td class="bg-blue-400"></td>
+                <td class="bg-blue-300"></td>
+                <td class="bg-blue-200"></td>
+                <td class="bg-blue-100"></td>
+                <td class="bg-blue-50"></td>
+              </tr>
+              <tr>
+                <td class="bg-green-900"></td>
+                <td class="bg-green-800"></td>
+                <td class="bg-green-700"></td>
+                <td class="bg-green-600"></td>
+                <td class="bg-green-500"></td>
+                <td class="bg-green-400"></td>
+                <td class="bg-green-300"></td>
+                <td class="bg-green-200"></td>
+                <td class="bg-green-100"></td>
+                <td class="bg-green-50"></td>
+              </tr>
+              <tr>
+                <td class="bg-yellow-900"></td>
+                <td class="bg-yellow-800"></td>
+                <td class="bg-yellow-700"></td>
+                <td class="bg-yellow-600"></td>
+                <td class="bg-yellow-500"></td>
+                <td class="bg-yellow-400"></td>
+                <td class="bg-yellow-300"></td>
+                <td class="bg-yellow-200"></td>
+                <td class="bg-yellow-100"></td>
+                <td class="bg-yellow-50"></td>
+              </tr>
+              <tr>
+                <td class="bg-red-900"></td>
+                <td class="bg-red-800"></td>
+                <td class="bg-red-700"></td>
+                <td class="bg-red-600"></td>
+                <td class="bg-red-500"></td>
+                <td class="bg-red-400"></td>
+                <td class="bg-red-300"></td>
+                <td class="bg-red-200"></td>
+                <td class="bg-red-100"></td>
+                <td class="bg-red-50"></td>
+              </tr>
+            </table>
+            <p>För att använda färgerna finns ett antal utility-klasser att tillgå:
+            <ul>
+              <li><code>bg-$färg-$nyans</code>: sätter bakgrundsfärgen av ett element
+                <li><code>color('$färg-$nyans')</code>: ger dig en viss CSS-färg
+            </ul>
+            <h2>Text</h2>
+            <p>
+            Texten använder typsnittet Source Sans Pro.
+            För att välja ut lämplig färg för text på vit bakgrund kan du använda klasserna <code>text-col-$färg</code>:
+            <span class="text-col-blue">Blå text</span>
+            <span class="text-col-green">Grön text</span>
+            <span class="text-col-yellow">Gul text</span>
+            <span class="text-col-red">Röd text</span>.
+            <a href="">Länkar</a> blir blå med en animerad färgändring.
+            Avgränsare ser ut såhär.
+            <hr>
+            För längre citat används med fördel en blockquote, som ser ut såhär:
+            <blockquote>
+              Det här är en blockquote.
+              Test test.
+              Vill ert företag bidra till vår verksamhet? Fördelarna är många -- det är ett bra sätt för er att bygga kontakter med Sveriges bästa problemlösare och en möjlighet att bidra till kompetensen hos era framtida anställda! De flesta av våra evenemang är helt kostnadsfria för deltagare - för oss är det viktigt att alla har möjlighet att uvecklas oberoende av ekonomiska förutsättningar. Det är tack vare sponsorer och samarbetspartners som detta är möjligt. Är du intresserad av att veta mer om vilka möjligheter ni har för att jobba med oss kan ni kontakta oss på spons@kodsport.se.
+
+              <cite>Johan Sannemo</cite>
+            </blockquote>
+
+            <h2>Rubriker</h2>
+            <p>För att avskilja text baserat på innehåll använder du rubriker (h1, ..., h6).
+            Rubriker använder typsnittet Roboto.
+            Rubrikerna ser ut som följer.
+            <h1>Huvudrubriken för ett dokument</h1>
+            <p>Lorem ipsum dolor sit amet.
+            <h2>Vanliga rubriker</h2>
+            <p>Lorem ipsum dolor sit amet.
+            <h3>Andra rubriker</h3>
+            <p>Lorem ipsum dolor sit amet.
+            <h4>Tredje rubriker (h4)</h4>
+            <p>Lorem ipsum dolor sit amet.
+            <h5>Fjärde rubriker (h5)</h5>
+            <p>Lorem ipsum dolor sit amet.
+            <h6>Femte rubriker (h6)</h6>
+            <p>Lorem ipsum dolor sit amet.
+
+            <h2>Knappar</h2>
+            Det finns tre olika sorters knappar.
+            Standard är enbart text.
+            För att få outline använder du <code>.outline</code>.
+            För att få den ifyllda använder du <code>.raised</code>.
+            Du får olika färger med t.ex <code>.btn-red</code>.
+            <br>
+            <button>Vanlig knapp</button>
+            <button class="outlined">Vanlig knapp</button>
+            <button class="raised">Vanlig knapp</button>
+            <br>
+            <button class="btn-red">Vanlig knapp</button>
+            <button class="btn-red outlined">Vanlig knapp</button>
+            <button class="btn-red raised">Vanlig knapp</button>
+            <br>
+            <button class="btn-yellow">Vanlig knapp</button>
+            <button class="btn-yellow outlined">Vanlig knapp</button>
+            <button class="btn-yellow raised">Vanlig knapp</button>
+            <br>
+            <button class="btn-green">Vanlig knapp</button>
+            <button class="btn-green outlined">Vanlig knapp</button>
+            <button class="btn-green raised">Vanlig knapp</button>
+
+            <h2>Formulär</h2>
+            <form>
+              <div class="form-group">
+                <label>
+                  <input type="text" required>
+                  <span class="placeholder">Text Input</span>
+                </label>
+              </div>
+            </form>
+            <h2>Tabeller</h2>
+            <table>
+              <tr>
+                <th>Namn</th>
+                <th>Email</th>
+                <th>Derp</th>
+              </tr>
+              <tr>
+                <td>Johan</td>
+                <td>johan.sannemo@kodsport.se</td>
+                <td><button class="btn-green">Vanlig knapp</button></td>
+              </tr>
+              <tr>
+                <td>Johan</td>
+                <td>johan.sannemo@kodsport.se</td>
+                <td><button class="btn-green">Vanlig knapp</button></td>
+              </tr>
+              <tr>
+                <td>Johan</td>
+                <td>johan.sannemo@kodsport.se</td>
+                <td><button class="btn-green">Vanlig knapp</button></td>
+              </tr>
+              <tr>
+                <td>Johan</td>
+                <td>johan.sannemo@kodsport.se</td>
+                <td><button class="btn-green">Vanlig knapp</button></td>
+              </tr>
+            </table>
+        </div>
+      </article>
+    </section>
+    <footer class="FooterBar">
+    </footer>
+  </body>
+</html>

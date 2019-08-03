@@ -1,0 +1,7 @@
+@import "../theme/colors";
+
+@each $color, $_ in $colors {
+  .bg-#{$color} {
+    background-color: color($color);
+  }
+}

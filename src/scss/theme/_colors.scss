@@ -1,0 +1,49 @@
+$base-colors: (
+  'yellow': #feb900,
+  'blue': #0089ff,
+  'green': #40d226,
+  'red': #ff3e34,
+  'black': #000000,
+  'white': #ffffff
+);
+
+$base-colors: map-merge($base-colors, ('primary': map-get($base-colors, 'blue')));
+$base-colors: map-merge($base-colors, ('accent': map-get($base-colors, 'yellow')));
+
+@function multiply($a, $b) {
+  $red: red($a) * red($b) / 255;
+  $green: green($a) * green($b) / 255;
+  $blue: blue($a) * blue($b) / 255;
+  @return rgb($red, $green, $blue);
+}
+
+$colors: (
+);
+
+@each $name, $value in $base-colors {
+   $colors: map-merge($colors, ($name: $value));
+   @debug $name $value;
+   @each $val, $lighten in (50: 12, 100: 30, 200: 60, 300: 70, 400: 85) {
+     $newcol: mix($value, white, $lighten);
+     $colors: map-merge($colors, (#{$name}-#{$val}: $newcol)) 
+   }
+   $colors: map-merge($colors, (#{$name}-500: $value)) ;
+   @each $val, $darken in (600: 87, 700: 70, 800: 54, 900: 25) {
+     $mixer: multiply($value, $value);
+     $mixer: multiply($mixer, $value);
+     $newcol: mix($value, $mixer, $darken);
+     $newcol: desaturate($newcol, 10%);
+     $colors: map-merge($colors, (#{$name}-#{$val}: $newcol));
+   }
+}
+
+@each $darkness in (1 2 3 4 5 10 20 30 40 50 60 70 80 90 100) {
+   $colors: map-merge($colors, (gray-#{$darkness}: rgba(0,0,0,$darkness/100)));
+}
+
+@debug $colors;
+
+@function color($key) {
+  @return map-get($colors, $key);
+}
+

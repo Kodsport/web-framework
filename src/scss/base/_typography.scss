@@ -1,0 +1,103 @@
+@import '../theme/colors';
+@import '../theme/typography';
+
+@each $color, $_ in $font-col {
+  .text-col-#{$color} {
+    color: font-color($color);
+  }
+}
+
+* {
+  color: font-color('default');
+  font-family: font('text');
+  font-size: $base-font-size;
+  line-height: 1.5;
+}
+
+.subtext {
+  color: font-color('subtext');
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: font('headers');
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  font-size: 2.5 * $base-font-size;
+
+  &.display {
+    font-size: 4 * $base-font-size;
+    font-family: font('display');
+    font-weight: 300;
+  }
+}
+
+h2 {
+  font-size: 2 * $base-font-size;
+  &.display {
+    font-size: 3 * $base-font-size;
+    font-family: font('display');
+    font-weight: 300;
+  }
+}
+
+h3 {
+  font-size: 1.75 * $base-font-size;
+}
+
+h4 {
+  font-size: 1.5 * $base-font-size;
+}
+
+h5 {
+  font-size: 1.25 * $base-font-size;
+}
+
+h6 {
+  font-size: 1 * $base-font-size;
+}
+
+p {
+  margin: 0;
+}
+
+code, pre {
+  font-family: font('code');
+  font-size: $base-font-size;
+  line-height: $base-font-size;
+}
+
+a {
+  color: font-color('links');
+  text-decoration: none;
+  transition: .3s ease;
+
+  &:hover {
+    color: font-color('links-hover');
+  }
+}
+
+
+blockquote {
+  margin-left: 1rem;
+  font-style: italic;
+  border-left: 3px solid color('accent-600');
+  padding: 0.5rem 1rem;
+
+  cite {
+    display: block;
+    margin-top: 1rem;
+    font-style: normal;
+    @extend .subtext;
+
+    &:before {
+      content: '  —  ';
+    }
+  }
+}
+
+hr {
+  border: 1px solid color('accent-600');
+  box-shadow: none;
+}
