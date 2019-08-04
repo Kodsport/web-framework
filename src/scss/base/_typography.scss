@@ -18,6 +18,7 @@ body .dark {
 p, li, ul, a, td, th {
   font-size: $base-font-size;
   line-height: 1.5;
+  margin-top: 0.5rem;
 }
 
 .subtext {
@@ -59,10 +60,6 @@ h5 {
 
 h6 {
   font-size: 1 * $base-font-size;
-}
-
-p {
-  margin: 0;
 }
 
 code, pre {

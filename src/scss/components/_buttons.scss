@@ -36,7 +36,8 @@
   }
 }
 
-button, input[type=submit] {
+button, input[type=submit], a.button {
+  display: inline-block;
   min-width: 64px;
   border: none;
   border-radius: 4px;

@@ -1,4 +1,4 @@
-table {
+table.plain {
   margin-top: 0.5rem;
   border-spacing: 0;
   border-collapse: collapse;
@@ -9,5 +9,40 @@ table {
   td, th {
     padding: 5px 20px 0px 0px;
     margin: 0;
+  }
+}
+
+table.bordered {
+  padding: 10px;
+  border-collapse: collapse;
+  border-radius: 10px;
+  border: 1px solid color('gray-10');
+
+  thead tr {
+    background-color: color('gray-5');
+    height: 40px;
+    border: 1px solid color('gray-10');
+
+    th {
+      padding: 10px;
+      font-family: font('headers');
+      color: color('gray-60');
+      text-transform: uppercase;
+      font-size: $base-font-size * 0.8;
+      font-weight: 600;
+    }
+  }
+
+  th {
+    text-align: left;
+  }
+
+  td, th {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  td {
+    border: 1px solid color('gray-10');
   }
 }

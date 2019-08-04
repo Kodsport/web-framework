@@ -1,0 +1,15 @@
+.alert {
+  border: 1px solid black;
+  padding: 7px;
+  border-radius: 3px;
+}
+
+.alert-error {
+  border-color: color('red-500');
+  background-color: color('red-100');
+}
+
+.alert-warn {
+  border-color: color('yellow-500');
+  background-color: color('yellow-100');
+}
