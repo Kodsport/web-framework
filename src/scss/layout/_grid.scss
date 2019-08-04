@@ -18,3 +18,29 @@ $max-page-width: 1000px;
 code, pre {
   overflow: auto;
 }
+
+html {
+  height: 100%;
+}
+
+body {
+	display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.navbar {
+  flex-shrink: 0;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex-shrink: 0;
+}
+
+.text-center {
+  text-align: center;
+}

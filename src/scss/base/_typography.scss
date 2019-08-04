@@ -7,9 +7,15 @@
   }
 }
 
-* {
-  color: font-color('default');
+body {
   font-family: font('text');
+}
+
+body .dark {
+  font-family: font('text-dark');
+}
+
+p, li, ul, a, td, th {
   font-size: $base-font-size;
   line-height: 1.5;
 }
@@ -75,6 +81,14 @@ a {
 
   &:hover {
     color: font-color('links-hover');
+  }
+}
+
+.dark a {
+	color: font-color('links-dark');
+
+  &:hover {
+    color: font-color('links-dark-hover');
   }
 }
 

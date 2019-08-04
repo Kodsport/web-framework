@@ -1,5 +1,10 @@
 @import '../theme/colors';
 
-.FooterBar {
-  background-color: color('gray-70');
+.footer {
+  background-color: color('blue-500');
+  color: color('white');
+  margin-top: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
 }

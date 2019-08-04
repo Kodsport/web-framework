@@ -21,6 +21,8 @@ $font-col: map-merge($font-col, ('default': font-color('gray')));
 $font-col: map-merge($font-col, ('links': font-color('blue')));
 $font-col: map-merge($font-col, ('links-hover': darken(font-color('links'), 20%)));
 $font-col: map-merge($font-col, ('subtext': color('gray-50')));
+$font-col: map-merge($font-col, ('links-dark': color('yellow-300')));
+$font-col: map-merge($font-col, ('links-dark-hover': font-color('white')));
 
 // Font families
 $fonts: (
