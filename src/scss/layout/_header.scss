@@ -2,9 +2,6 @@
 @import '../theme/colors';
 
 .navbar {
-  position: sticky;
-  z-index: 1;
-  top: 0;
   background-color: color('white');
   border-bottom: 1px solid color('gray-10');
 

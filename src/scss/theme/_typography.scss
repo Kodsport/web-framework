@@ -27,7 +27,7 @@ $font-col: map-merge($font-col, ('links-dark-hover': font-color('white')));
 // Font families
 $fonts: (
   'headers': ('Roboto Condensed', sans-serif),
-  'text': 'Roboto',
+  'text': 'Source Sans Pro',
   'code': 'Roboto Mono',
   'buttons': 'Roboto',
   'display': 'Roboto Light'
@@ -37,4 +37,4 @@ $fonts: (
   @return map-get($fonts, $key);
 }
 
-$base-font-size: 16px;
+$base-font-size: 18px;
