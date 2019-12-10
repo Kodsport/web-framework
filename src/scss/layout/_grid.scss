@@ -1,10 +1,20 @@
-$max-page-width: 1000px;
+$max-content-width: 1000px;
+$max-page-width: 1500px;
 
-.row {
+.centered-content {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
+}
+
+.wide-row {
+  @extend .centered-content;
   max-width: $max-page-width;
+}
+
+.row {
+  @extend .centered-content;
+  max-width: $max-content-width;
 }
 
 @media (max-width: 1030px) {

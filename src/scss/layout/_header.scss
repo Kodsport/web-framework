@@ -7,20 +7,28 @@
 
   .navbar-container {
     @extend .row;
-    height: 100px;
+    height: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
   .navbar-logo {
-    height: 65px;
+    height: 50px;
+  }
+
+  .navbar-textlogo {
+    height: 50px;
+    font-weight: bold;
+    color: font-color('gray');
+    text-transform: uppercase;
   }
 
   .navbar-nav {
     max-width: 610px;
     margin-left: 2rem;
     flex: 1;
+    text-transform: uppercase;
 
     > ul {
       display: flex;
@@ -29,9 +37,8 @@
     }
 
     a {
-      font-size: 1em;
-      font-family: 'Roboto Condensed';
-      color: font-color('default');
+      font-weight: 600;
+      color: font-color('gray');
 
       &:hover {
         color: font-color('links');
@@ -50,7 +57,7 @@
 
   .navbar-dropdown-caret {
     display: inline-block;
-    margin-left: 6px;
+    margin-left: 3px;
     vertical-align: middle;
     border-top: 5px solid;
     border-right: 5px solid transparent;
@@ -76,7 +83,7 @@
       padding: 10px 0 10px 0;
       > li > a {
         display: block;
-        padding: 13px 20px 13px 20px;
+        padding: 10px 15px 10px 15px;
 
         &:hover {
           background-color: color('gray-5');

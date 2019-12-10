@@ -9,16 +9,8 @@
 
 body {
   font-family: font('text');
-}
-
-body .dark {
-  font-family: font('text-dark');
-}
-
-p, li, ul, a, td, th {
   font-size: $base-font-size;
   line-height: 1.5;
-  margin-top: 0.5rem;
 }
 
 .subtext {
@@ -64,7 +56,7 @@ h6 {
 
 code, pre {
   font-family: font('code');
-  font-size: $base-font-size;
+  font-size: 15px;
 }
 
 a {
@@ -78,13 +70,12 @@ a {
 }
 
 .dark a {
-	color: font-color('links-dark');
+  color: font-color('links-dark');
 
   &:hover {
     color: font-color('links-dark-hover');
   }
 }
-
 
 blockquote {
   margin-left: 1rem;
