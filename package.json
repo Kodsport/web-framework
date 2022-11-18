@@ -36,7 +36,7 @@
     "vinyl-source-stream": "^2.0.0",
     "watchify": "^3.11.1",
     "webpack": "^4.30.0",
-    "webpack-cli": "^3.3.2",
+    "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.3.1"
   }
 }
